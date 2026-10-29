@@ -1,0 +1,81 @@
+{
+  "schema": {
+    "id": "unique fact id, e.g. F01",
+    "term": "the term or topic this fact is about",
+    "type": "'definition' (what a term means for this review) or 'decision' (a choice the reviewer made)",
+    "value": "the actual content — this is the gold answer for memory-required probe tasks",
+    "notes": "why this fact is useful for task design"
+  },
+  "facts": [
+    {
+      "id": "F01",
+      "term": "inclusion cutoff year",
+      "type": "decision",
+      "value": "Only include papers published in 2019 or later.",
+      "notes": "Can be combined with paper years (P05=2019, P02=2020...) for multi-step filtering tasks."
+    },
+    {
+      "id": "F02",
+      "term": "ablation condition",
+      "type": "definition",
+      "value": "The specific set of components removed from the base model to isolate one factor's contribution.",
+      "notes": "Good basic plant/probe pair — pure definition recall."
+    },
+    {
+      "id": "F03",
+      "term": "primary metric",
+      "type": "decision",
+      "value": "Accuracy, not F1, for classification papers, unless accuracy isn't reported at all.",
+      "notes": "Use this as the base fact for a failure/recovery task (plant wrong update, then correct back to this)."
+    },
+    {
+      "id": "F04",
+      "term": "edge deployment",
+      "type": "definition",
+      "value": "Models under 500MB intended to run without a network connection.",
+      "notes": "Pairs with P05 (distillation results) for combined memory+reasoning tasks in V2."
+    },
+    {
+      "id": "F05",
+      "term": "review focus",
+      "type": "decision",
+      "value": "Agent memory and continual learning this round, not general model compression.",
+      "notes": "Good plant/probe pair; also usable as a distractor fact in unrelated tasks."
+    },
+    {
+      "id": "F06",
+      "term": "flat policy",
+      "type": "definition",
+      "value": "A control policy trained without any hierarchical or skill-based decomposition.",
+      "notes": "Pairs with P04 (skill chaining vs flat baseline)."
+    },
+    {
+      "id": "F07",
+      "term": "exclusion rule",
+      "type": "decision",
+      "value": "Exclude any paper that only reports results on synthetic/simulated data with no real-world validation.",
+      "notes": "Good for multi-step tasks: search a paper, then apply this rule to judge inclusion."
+    },
+    {
+      "id": "F08",
+      "term": "contradiction rate",
+      "type": "definition",
+      "value": "The fraction of dialogue turns where the agent states something inconsistent with an earlier turn.",
+      "notes": "Directly pairs with P06's own finding — a nice self-referential distractor."
+    },
+    {
+      "id": "F09",
+      "term": "citation style",
+      "type": "decision",
+      "value": "Short author-year citations (e.g., 'Sato & Kowalski, 2023'), not numbered citations, in all saved notes.",
+      "notes": "Low-stakes formatting decision — useful as a 'noise' fact that isn't asked about, to test the agent isn't just dumping all memory."
+    },
+    {
+      "id": "F10",
+      "term": "confidence threshold",
+      "type": "decision",
+      "value": "Only tag a finding as 'strong evidence' if the reported improvement is 5 points or more; below that, tag it 'modest'.",
+      "notes": "Great for multi-step tasks: search a paper's finding, then apply this rule to classify it."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schema": {
+    "id": "unique paper id, e.g. P01",
+    "title": "invented paper title",
+    "authors": "list of invented author names",
+    "year": "invented publication year",
+    "method_tag": "short label for the core method, used for search matching",
+    "finding": "one-line, specific, quantified made-up result — this is the gold answer for tool-required tasks",
+    "tags": "loose topic keywords for search_papers matching"
+  },
+  "papers": [
+    {
+      "id": "P01",
+      "title": "Sparse Attention Windows for Long-Context Retrieval",
+      "authors": ["R. Voss", "T. Adeyemi"],
+      "year": 2022,
+      "method_tag": "sparse local+global attention masks",
+      "finding": "Reduces long-context retrieval latency by 38% with no accuracy drop on the 32k-token benchmark.",
+      "tags": ["retrieval", "long-context", "attention", "efficiency"]
+    },
+    {
+      "id": "P02",
+      "title": "Contrastive Curriculum Sampling for Low-Resource NER",
+      "authors": ["L. Mbeki", "S. Farooqi"],
+      "year": 2020,
+      "method_tag": "contrastive curriculum sampling",
+      "finding": "Improves F1 by 6.2 points on low-resource Swahili NER using only 500 labeled examples.",
+      "tags": ["NER", "low-resource", "curriculum learning", "NLP"]
+    },
+    {
+      "id": "P03",
+      "title": "Elastic Weight Replay for Continual Vision Transformers",
+      "authors": ["H. Sato", "A. Kowalski"],
+      "year": 2023,
+      "method_tag": "elastic weight replay buffer",
+      "finding": "Cuts catastrophic forgetting by 71% across five sequential vision tasks on standard image benchmarks.",
+      "tags": ["continual learning", "vision transformers", "catastrophic forgetting"]
+    },
+    {
+      "id": "P04",
+      "title": "Latent Skill Chaining for Long-Horizon Robotic Manipulation",
+      "authors": ["D. Okafor", "M. Lindqvist"],
+      "year": 2021,
+      "method_tag": "latent skill chaining",
+      "finding": "Achieves 82% success on 6-step pick-and-place chains versus 34% for flat policies.",
+      "tags": ["robotics", "manipulation", "hierarchical", "long-horizon"]
+    },
+    {
+      "id": "P05",
+      "title": "Calibrated Ensemble Distillation for Edge Speech Recognition",
+      "authors": ["Y. Park", "C. Njoroge"],
+      "year": 2019,
+      "method_tag": "calibrated ensemble distillation",
+      "finding": "Shrinks model size 9x while losing only 1.4 WER points on noisy edge audio.",
+      "tags": ["speech recognition", "distillation", "edge deployment"]
+    },
+    {
+      "id": "P06",
+      "title": "Graph-Guided Memory Consolidation for Dialogue Agents",
+      "authors": ["P. Dubois", "N. Osei"],
+      "year": 2024,
+      "method_tag": "graph-guided memory consolidation",
+      "finding": "Reduces contradiction rate in 20-turn dialogues from 24% to 7%.",
+      "tags": ["dialogue agents", "memory", "consolidation"]
+    },
+    {
+      "id": "P07",
+      "title": "Adaptive Batch Reweighting for Class-Imbalanced Fraud Detection",
+      "authors": ["E. Haas", "T. Ibekwe"],
+      "year": 2020,
+      "method_tag": "adaptive batch reweighting",
+      "finding": "Raises minority-class recall from 0.41 to 0.68 without hurting precision.",
+      "tags": ["fraud detection", "class imbalance", "classification"]
+    },
+    {
+      "id": "P08",
+      "title": "Cross-Lingual Prompt Anchoring for Zero-Shot Translation",
+      "authors": ["J. Moreno", "W. Achterberg"],
+      "year": 2022,
+      "method_tag": "cross-lingual prompt anchoring",
+      "finding": "Gains 4.8 BLEU on zero-shot translation between typologically distant language pairs.",
+      "tags": ["translation", "zero-shot", "multilingual"]
+    },
+    {
+      "id": "P09",
+      "title": "Hierarchical Reward Shaping for Sparse-Feedback RL",
+      "authors": ["K. Nakamura", "F. Adeoye"],
+      "year": 2021,
+      "method_tag": "hierarchical reward shaping",
+      "finding": "Cuts training steps to convergence by 55% on sparse-reward maze tasks.",
+      "tags": ["reinforcement learning", "reward shaping", "sparse reward"]
+    },
+    {
+      "id": "P10",
+      "title": "Differential Privacy Budgets for Federated Recommendation",
+      "authors": ["S. Kowalczyk", "A. Mensah"],
+      "year": 2023,
+      "method_tag": "adaptive per-client privacy budgets",
+      "finding": "Keeps recommendation accuracy within 2% of the non-private baseline at epsilon=3.",
+      "tags": ["federated learning", "privacy", "recommendation"]
+    },
+    {
+      "id": "P11",
+      "title": "Temporal Contrastive Pretraining for Satellite Change Detection",
+      "authors": ["R. Alavi", "B. Nwosu"],
+      "year": 2022,
+      "method_tag": "temporal contrastive pretraining",
+      "finding": "Improves change-detection mIoU by 11 points over supervised-only baselines.",
+      "tags": ["remote sensing", "change detection", "contrastive learning"]
+    },
+    {
+      "id": "P12",
+      "title": "Modular Tool Routing for Multi-Tool LLM Agents",
+      "authors": ["G. Petrov", "L. Adeyemi"],
+      "year": 2024,
+      "method_tag": "modular tool routing layer",
+      "finding": "Reduces wrong-tool-selection errors by 63% compared to single-prompt tool choice.",
+      "tags": ["LLM agents", "tool use", "routing"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "items": [
+    {"id":"P01","type":"paper","term":"Sparse Attention Windows for Long-Context Retrieval","value":"P01 was published in 2022. Finding: Reduces long-context retrieval latency by 38% with no accuracy drop on the 32k-token benchmark.","tags":["retrieval","long-context","attention","efficiency"]},
+    {"id":"P02","type":"paper","term":"Contrastive Curriculum Sampling for Low-Resource NER","value":"P02 was published in 2020. Finding: Improves F1 by 6.2 points on low-resource Swahili NER using only 500 labeled examples.","tags":["NER","low-resource","curriculum learning","NLP"]},
+    {"id":"P03","type":"paper","term":"Elastic Weight Replay for Continual Vision Transformers","value":"P03 was published in 2023. Finding: Cuts catastrophic forgetting by 71% across five sequential vision tasks on standard image benchmarks.","tags":["continual learning","vision","forgetting"]},
+    {"id":"P04","type":"paper","term":"Latent Skill Chaining for Long-Horizon Robotic Manipulation","value":"P04 was published in 2021. Finding: Achieves 82% success on 6-step pick-and-place chains versus 34% for flat policies.","tags":["robotics","chaining","long-horizon"]},
+    {"id":"P05","type":"paper","term":"Calibrated Ensemble Distillation for Edge Speech Recognition","value":"P05 was published in 2019. Finding: Shrinks model size 9x while losing only 1.4 WER points on noisy edge audio.","tags":["speech","distillation","edge"]},
+    {"id":"P06","type":"paper","term":"Graph-Guided Memory Consolidation for Dialogue Agents","value":"P06 was published in 2024. Finding: Reduces contradiction rate in 20-turn dialogues from 24% to 7%.","tags":["dialogue","memory","consolidation"]},
+    {"id":"P07","type":"paper","term":"Adaptive Batch Reweighting for Class-Imbalanced Fraud Detection","value":"P07 was published in 2020. Finding: Raises minority-class recall from 0.41 to 0.68 without hurting precision.","tags":["fraud","classification","recall"]},
+    {"id":"P08","type":"paper","term":"Cross-Lingual Prompt Anchoring for Zero-Shot Translation","value":"P08 was published in 2022. Finding: Gains 4.8 BLEU on zero-shot translation between typologically distant language pairs.","tags":["translation","zero-shot","multilingual"]},
+    {"id":"P09","type":"paper","term":"Hierarchical Reward Shaping for Sparse-Feedback RL","value":"P09 was published in 2021. Finding: Cuts training steps to convergence by 55% on sparse-reward maze tasks.","tags":["reinforcement learning","reward shaping","sparse reward"]},
+    {"id":"P10","type":"paper","term":"Differential Privacy Budgets for Federated Recommendation","value":"P10 was published in 2023. Finding: Keeps recommendation accuracy within 2% of the non-private baseline at epsilon=3.","tags":["federated learning","privacy","recommendation"]},
+    {"id":"P11","type":"paper","term":"Temporal Contrastive Pretraining for Satellite Change Detection","value":"P11 was published in 2022. Finding: Improves change-detection mIoU by 11 points over supervised-only baselines.","tags":["remote sensing","change detection","contrastive"]},
+    {"id":"P12","type":"paper","term":"Modular Tool Routing for Multi-Tool LLM Agents","value":"P12 was published in 2024. Finding: Reduces wrong-tool-selection errors by 63% compared to single-prompt tool choice.","tags":["LLM agents","tool use","routing"]},
+    {"id":"F01","type":"review_fact","term":"inclusion cutoff year","value":"Only include papers published in 2019 or later.","tags":["inclusion","cutoff","year"]},
+    {"id":"F02","type":"review_fact","term":"ablation condition","value":"The specific set of components removed from the base model to isolate one factor's contribution.","tags":["ablation","definition"]},
+    {"id":"F03","type":"review_fact","term":"primary metric","value":"Accuracy, not F1, for classification papers, unless accuracy isn't reported at all.","tags":["metric","classification","accuracy"]},
+    {"id":"F04","type":"review_fact","term":"edge deployment","value":"Models under 500MB intended to run without a network connection.","tags":["edge","deployment","500MB"]},
+    {"id":"F05","type":"review_fact","term":"review focus","value":"Agent memory and continual learning this round, not general model compression.","tags":["review","focus","memory"]},
+    {"id":"F06","type":"review_fact","term":"flat policy","value":"A control policy trained without any hierarchical or skill-based decomposition.","tags":["flat","policy","hierarchical"]},
+    {"id":"F07","type":"review_fact","term":"exclusion rule","value":"Exclude any paper that only reports results on synthetic/simulated data with no real-world validation.","tags":["exclusion","synthetic","validation"]},
+    {"id":"F08","type":"review_fact","term":"contradiction rate","value":"The fraction of dialogue turns where the agent states something inconsistent with an earlier turn.","tags":["dialogue","contradiction"]},
+    {"id":"F09","type":"review_fact","term":"citation style","value":"Short author-year citations, not numbered citations, in all saved notes.","tags":["citation","style"]},
+    {"id":"F10","type":"review_fact","term":"confidence threshold","value":"Only tag a finding as strong evidence if the reported improvement is 5 points or more; below that, tag it modest.","tags":["confidence","threshold","evidence"]}
+  ]
+}

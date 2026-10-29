@@ -1,0 +1,568 @@
+{
+  "benchmark": "controlled-information-access-v1",
+  "research_question": "How do direct contextual access, external tool retrieval, and persistent memory affect the performance and efficiency of the same local LLM agent?",
+  "conditions": [
+    "baseline",
+    "tool",
+    "memory"
+  ],
+  "tasks": [
+    {
+      "task_id": "K-01",
+      "episode_index": 1,
+      "category": "single_fact",
+      "prompt": "What finding did the study on hierarchical reward shaping for sparse-feedback RL report?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "55%",
+          "training steps"
+        ]
+      },
+      "information": {
+        "id": "P09",
+        "context": "P09 \u2014 Hierarchical Reward Shaping for Sparse-Feedback RL. Finding: Cuts training steps to convergence by 55% on sparse-reward maze tasks.",
+        "memory_topic": "P09 reward shaping",
+        "memory_content": "P09 \u2014 Hierarchical Reward Shaping for Sparse-Feedback RL. Finding: Cuts training steps to convergence by 55% on sparse-reward maze tasks."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "hierarchical reward shaping sparse-feedback RL"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "P09"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "P09 reward shaping"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-02",
+      "episode_index": 2,
+      "category": "single_fact",
+      "prompt": "For our review, what does 'ablation condition' mean?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "specific set of components removed",
+          "isolate one factor's contribution"
+        ]
+      },
+      "information": {
+        "id": "F02",
+        "context": "F02 \u2014 Ablation condition: The specific set of components removed from the base model to isolate one factor's contribution.",
+        "memory_topic": "ablation condition",
+        "memory_content": "F02 \u2014 Ablation condition: The specific set of components removed from the base model to isolate one factor's contribution."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "ablation condition"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "F02"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "ablation condition"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-03",
+      "episode_index": 3,
+      "category": "single_fact",
+      "prompt": "Which paper reports a BLEU gain on zero-shot translation between typologically distant languages, and what was the gain?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "P08",
+          "4.8 BLEU"
+        ]
+      },
+      "information": {
+        "id": "P08",
+        "context": "P08 \u2014 Cross-Lingual Prompt Anchoring for Zero-Shot Translation. Finding: Gains 4.8 BLEU on zero-shot translation between typologically distant language pairs.",
+        "memory_topic": "P08 translation",
+        "memory_content": "P08 \u2014 Cross-Lingual Prompt Anchoring for Zero-Shot Translation. Finding: Gains 4.8 BLEU on zero-shot translation between typologically distant language pairs."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "zero-shot translation typologically distant languages BLEU"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "P08"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "P08 translation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-04",
+      "episode_index": 4,
+      "category": "single_fact",
+      "prompt": "What is our review focus this round?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "agent memory and continual learning",
+          "not general model compression"
+        ]
+      },
+      "information": {
+        "id": "F05",
+        "context": "F05 \u2014 Review focus: Agent memory and continual learning this round, not general model compression.",
+        "memory_topic": "review focus",
+        "memory_content": "F05 \u2014 Review focus: Agent memory and continual learning this round, not general model compression."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "review focus agent memory continual learning"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "F05"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "review focus"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-05",
+      "episode_index": 5,
+      "category": "reasoning_after_retrieval",
+      "prompt": "Find the low-resource NER study. How many labeled examples did it use, and what percentage is that of a 5,000-example baseline?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "P02",
+          "500 labeled examples",
+          "10%"
+        ]
+      },
+      "information": {
+        "id": "P02",
+        "context": "P02 \u2014 Contrastive Curriculum Sampling for Low-Resource NER. Finding: Improves F1 by 6.2 points on low-resource Swahili NER using only 500 labeled examples.",
+        "memory_topic": "P02 low-resource NER",
+        "memory_content": "P02 \u2014 Contrastive Curriculum Sampling for Low-Resource NER. Finding: Improves F1 by 6.2 points on low-resource Swahili NER using only 500 labeled examples."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "low-resource NER labeled examples"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "P02"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "P02 low-resource NER"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-06",
+      "episode_index": 6,
+      "category": "multi_source_reasoning",
+      "prompt": "Identify the two studies involving skill chaining or memory consolidation, then give their publication years in chronological order.",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "P04",
+          "2021",
+          "P06",
+          "2024"
+        ]
+      },
+      "information": {
+        "id": "P04-P06",
+        "context": "P04 was published in 2021 and concerns latent skill chaining for long-horizon robotic manipulation. P06 was published in 2024 and concerns graph-guided memory consolidation for dialogue agents.",
+        "memory_topic": "P04 and P06 years",
+        "memory_content": "P04 was published in 2021 and concerns latent skill chaining for long-horizon robotic manipulation. P06 was published in 2024 and concerns graph-guided memory consolidation for dialogue agents."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "skill chaining memory consolidation"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "P04"
+            }
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "P06"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "P04 and P06 years"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-07",
+      "episode_index": 7,
+      "category": "comparison",
+      "prompt": "Compare the success rates reported for the hierarchical P04 method and its flat-policy comparison. What is the difference in percentage points?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "82%",
+          "34%",
+          "48 percentage points"
+        ]
+      },
+      "information": {
+        "id": "P04",
+        "context": "P04 reports 82% success for latent skill chaining on 6-step pick-and-place chains versus 34% for flat policies.",
+        "memory_topic": "P04 success comparison",
+        "memory_content": "P04 reports 82% success for latent skill chaining on 6-step pick-and-place chains versus 34% for flat policies."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "P04 hierarchical skill chaining flat policy success"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "P04"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "P04 success comparison"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-08",
+      "episode_index": 8,
+      "category": "threshold_reasoning",
+      "prompt": "Our confidence rule says an improvement of 5 points or more is strong evidence. Using P02's reported improvement, should it be tagged strong evidence or modest?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "6.2 points",
+          "strong evidence"
+        ]
+      },
+      "information": {
+        "id": "P02-F10",
+        "context": "P02 reports an F1 improvement of 6.2 points. F10 says an improvement of 5 points or more is strong evidence; below 5 points is modest.",
+        "memory_topic": "P02 and confidence rule",
+        "memory_content": "P02 reports an F1 improvement of 6.2 points. F10 says an improvement of 5 points or more is strong evidence; below 5 points is modest."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "P02 improvement confidence threshold"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "P02"
+            }
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "F10"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "P02 and confidence rule"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-09",
+      "episode_index": 9,
+      "category": "persistent_retrieval",
+      "prompt": "What is the current primary metric decision for classification papers?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "Accuracy",
+          "not F1"
+        ]
+      },
+      "information": {
+        "id": "F03",
+        "context": "F03 \u2014 Primary metric: Accuracy, not F1, for classification papers, unless accuracy isn't reported at all.",
+        "memory_topic": "primary metric",
+        "memory_content": "F03 \u2014 Primary metric: Accuracy, not F1, for classification papers, unless accuracy isn't reported at all."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "primary metric classification accuracy not F1"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "F03"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "primary metric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-10",
+      "episode_index": 10,
+      "category": "persistent_retrieval",
+      "prompt": "What does our exclusion rule say about papers based only on synthetic or simulated data?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "Exclude any paper",
+          "synthetic/simulated data",
+          "no real-world validation"
+        ]
+      },
+      "information": {
+        "id": "F07",
+        "context": "F07 \u2014 Exclusion rule: Exclude any paper that only reports results on synthetic/simulated data with no real-world validation.",
+        "memory_topic": "exclusion rule",
+        "memory_content": "F07 \u2014 Exclusion rule: Exclude any paper that only reports results on synthetic/simulated data with no real-world validation."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "exclusion rule synthetic simulated real-world validation"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "F07"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "exclusion rule"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-11",
+      "episode_index": 11,
+      "category": "persistent_retrieval",
+      "prompt": "What citation style did we decide to use in saved notes?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "author-year",
+          "not numbered"
+        ]
+      },
+      "information": {
+        "id": "F09",
+        "context": "F09 \u2014 Citation style: Short author-year citations, not numbered citations, in all saved notes.",
+        "memory_topic": "citation style",
+        "memory_content": "F09 \u2014 Citation style: Short author-year citations, not numbered citations, in all saved notes."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "citation style author-year numbered"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "F09"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "citation style"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "K-12",
+      "episode_index": 12,
+      "category": "persistent_retrieval",
+      "prompt": "What does the edge deployment definition require in terms of model size and connectivity?",
+      "answer_check": {
+        "mode": "contains_all",
+        "values": [
+          "under 500MB",
+          "without a network connection"
+        ]
+      },
+      "information": {
+        "id": "F04",
+        "context": "F04 \u2014 Edge deployment: Models under 500MB intended to run without a network connection.",
+        "memory_topic": "edge deployment",
+        "memory_content": "F04 \u2014 Edge deployment: Models under 500MB intended to run without a network connection."
+      },
+      "expected_tool_calls": {
+        "baseline": [],
+        "tool": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "edge deployment 500MB network connection"
+            },
+            "match": "name_only"
+          },
+          {
+            "tool": "get_knowledge",
+            "args": {
+              "id": "F04"
+            }
+          }
+        ],
+        "memory": [
+          {
+            "tool": "search_notes",
+            "args": {
+              "query": "edge deployment"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
